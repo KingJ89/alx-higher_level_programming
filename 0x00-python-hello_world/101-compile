@@ -1,3 +1,2 @@
 #!/bin/bash
-chmod u+x compile_script.py
-
+python3 -m compileall -b $PYFILE
