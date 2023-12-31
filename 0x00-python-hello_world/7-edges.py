@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-def print_word_info(word):
-    print_word_info("School")
-    print_word_info("Holberton")
-word = "School"
+word = "School" "Holberton"
 first_3_letters = word[:3]
 last_2_letters = word[-2:]
 middle_word = word[1:-1]
