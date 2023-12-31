@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+def print_word_info(word):
+    print_word_info("School")
+    print_word_info("Holberton")
 word = "School"
 first_3_letters = word[:3]
 last_2_letters = word[-2:]
