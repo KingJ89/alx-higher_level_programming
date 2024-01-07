@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import random
 number = random.randit(-10, 10)
-if number == 0:
-    print(number, "truly Zero")
-elif number > 0:
-    print (number, "positive")
+if number > 0:
+    print(number, "is positive"))
+elif number == 0:
+    print (number, "is Zero")
 else:
-    print(number, "negative")
+    print(number, "is negative")
