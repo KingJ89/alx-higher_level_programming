@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for j in range(97, 123):
-    if chr(j) != 'q' and chr(j) != 'e':
+for i in range(97, 123):
+    if chr(i) != 'q' and chr(i) != 'e':
         print("{}".format(chrj)), end="")
