@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-#prints integers from 00 to 98 with leading zeros seperated by commas.
-for j in range(0, 100):
-    if j == 99:
-        print("{}".format(j))
+for i in range(0, 100):
+    if i == 99:
+        print("{}".format(i))
     else:
-        print("{:02}".format(j), end="")
+        print("{:02}".format(i), end=", ")
