@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""handles uppercase string printing."""
-
-def uppercase(str):
-    for c in str:
-        if ord(c) >= 97 and ord(c)<=122:
+def uppercase(s):
+    """Converts lowercase letters to uppercase in a given string."""
+    result = ""
+    for c in s:
+        if ord(c) >= 97 and ord(c) <= 122:
             c = chr(ord(c) - 32)
-            print("{}".format(c), end="")
-            print("")
+        result += c
+    return result
