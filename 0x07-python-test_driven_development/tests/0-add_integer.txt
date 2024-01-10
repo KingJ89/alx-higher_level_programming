@@ -1,0 +1,28 @@
+#Welcome to the add intejer project module
+
+#Usage
+
+>>> add_integer(2, 3)
+5
+
+>>> add_integer(2.9, 0.2)
+2
+
+# Non-Number Cases
+
+>>>add_integer("hello", 3)
+TypeError: 'a' must be an int or float
+
+>>> add_integer(2.3, None)
+TypeError: 'b' must be an int or float
+
+>>> add_integer(2)
+100
+
+
+>>> add_integer(float('inf'))
+OverflowError: 'a' is a float with an infinite value, which cannot be converted to an int
+
+>>> add_integer(2, float('nan'))
+ValueError: 'b' is a float with NaN value, which cannot be converted to an int
+
