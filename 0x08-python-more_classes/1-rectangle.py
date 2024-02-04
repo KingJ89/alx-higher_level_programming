@@ -1,38 +1,38 @@
 #!/usr/bin/python3
 
-class Rectangle:
-    """Canvas for Personalized Designs"""
 
-    def __init__(self, my_width=0, my_height=0):
-        self.my_height = my_height
-        self.my_width = my_width
+class Rectangle:
+    """rectangle class"""
+    def __init__(self, width=0, height=0):
+        self.height = height
+        self.width = width
 
     @property
-    def my_width(self):
-        """Retrieve canvas width"""
+    def width(self):
+        """Retrieve attribute"""
         return self.__width
 
-    @my_width.setter
-    def my_width(self, value):
-        """Set canvas width"""
+    @width.setter
+    def width(self, value):
+        """To set attribute"""
         if type(value) is not int:
-            raise TypeError("Width must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("Width must be >= 0")
+            raise ValueError("width must be >= 0")
 
         self.__width = value
 
     @property
-    def my_height(self):
-        """Retrieve canvas height"""
+    def height(self):
+        """To retrieve attribute"""
         return self.__height
 
-    @my_height.setter
-    def my_height(self, value):
-        """Set canvas height"""
+    @height.setter
+    def height(self, value):
+        """To set the attribute"""
         if type(value) is not int:
-            raise TypeError("Height must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("Height must be >= 0")
+            raise ValueError("height must be >= 0")
 
         self.__height = value
