@@ -1,42 +1,38 @@
 #!/usr/bin/python3
 
-"""
-create class Rectangle that defines a rectangle
-"""
-
 class Rectangle:
-    """Rectangle class"""
+    """Canvas for Personalized Designs"""
 
-    def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+    def __init__(self, my_width=0, my_height=0):
+        self.my_height = my_height
+        self.my_width = my_width
 
-        @property
-        def width(self):
-            return self.__width
+    @property
+    def my_width(self):
+        """Retrieve canvas width"""
+        return self.__width
 
-        @width.setter
-        def width(self, value):
-            self._validate_non_negative_integer("width", value)
-            self.__width = value
+    @my_width.setter
+    def my_width(self, value):
+        """Set canvas width"""
+        if type(value) is not int:
+            raise TypeError("Width must be an integer")
+        if value < 0:
+            raise ValueError("Width must be >= 0")
 
-            @property
-            def height(self):
-                return self.__height
+        self.__width = value
 
-            @height.setter
-            def height(self, value):
-                self._validate_non_negative_integer("height", value)
-                self.__height = value
+    @property
+    def my_height(self):
+        """Retrieve canvas height"""
+        return self.__height
 
-                def _validate_non_negative_integer(self, attibute, value):
-                    if not isinstance(value, int):
-                        raise TypeError(f"{attribute} must be an integer")
-                    if value < 0:
-                        raise ValueError(f"{attribute} must be >= 0")
-                    if __name__ == "__main__":
-                        rect1 = Rectangle(2, 4)
-                        rect2 = Rectangle(10, 3)
+    @my_height.setter
+    def my_height(self, value):
+        """Set canvas height"""
+        if type(value) is not int:
+            raise TypeError("Height must be an integer")
+        if value < 0:
+            raise ValueError("Height must be >= 0")
 
-                        print(rect1.__dict__)
-                        print(rect2.__dict__)
+        self.__height = value
