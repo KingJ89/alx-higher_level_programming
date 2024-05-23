@@ -1,3 +1,2 @@
---creates a new database in mysql server and also if alrwesady exists shouldnt fail.
-
-CREATE DATABASE IF NOT EXIST hbtn_0c_0;
+-- Create the database if it does not exist
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
