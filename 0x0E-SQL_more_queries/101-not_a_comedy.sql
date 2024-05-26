@@ -1,10 +1,13 @@
 -- lists all shows without genre comedy
 -- sorted in ascending order
-SELECT ts.title
-FROM tv_shows AS ts
-LEFT JOIN tv_show_genres AS tsg ON ts.id = tsg.show_id
-LEFT JOIN tv_genres AS tg ON tsg.genre_id = tg.id
-WHERE tg.name != 'Comedy' OR tg.name IS NULL
-GROUP BY ts.title
-ORDER BY ts.title ASC;
-
+SELECT title
+FROM tv_shows
+WHERE title NOT IN (
+    SELECT title
+    FROM tv_shows
+    LEFT JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
+    LEFT JOIN tv_genres ON tv_show_genres.genre_id = tv_genres.id
+    WHERE tv_genres.name = 'Comedy'
+  )
+GROUP BY title
+ORDER BY title ASC;
