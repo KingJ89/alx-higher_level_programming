@@ -1,6 +1,0 @@
-Append each movie title as a list item
-        $.each(movieTitles, function (index, title) {
-            movieList.append(`<li>${title}</li>`);
-        });
-    }
-});
